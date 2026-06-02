@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Orders</h2>
+
+{% for order in orders %}
+
+<div class="card p-3 mb-3">
+
+<h4>
+
+{{ order.product.name }}
+
+</h4>
+
+<p>
+
+Quantity :
+{{ order.quantity }}
+
+</p>
+
+<p>
+
+Status :
+{{ order.status }}
+
+</p>
+
+<p>
+
+Payment :
+{{ order.payment_status }}
+
+</p>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}
+</body>
+</html>

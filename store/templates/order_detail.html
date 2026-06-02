@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Order Detail</h2>
+
+<p>Order ID : {{ order.id }}</p>
+
+<p>Status : {{ order.status }}</p>
+
+<p>Payment : {{ order.payment_status }}</p>
+
+{% endblock %}
+</body>
+</html>

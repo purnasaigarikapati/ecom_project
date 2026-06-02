@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Products</h2>
+
+<div class="row">
+
+{% for product in products %}
+
+<div class="col-md-4">
+
+<div class="card mb-3">
+
+<img src="{{ product.image.url }}"
+class="card-img-top"
+height="250">
+
+<div class="card-body">
+
+<h4>{{ product.name }}</h4>
+
+<p>{{ product.price }}</p>
+
+<a href="/product/{{product.id}}/"
+class="btn btn-info">
+View
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
+</body>
+</html>
